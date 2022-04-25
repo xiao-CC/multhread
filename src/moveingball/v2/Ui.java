@@ -16,7 +16,7 @@ public class Ui extends JFrame {
         this.setVisible(true);
 
         g=this.getGraphics();
-        mouLis.setG(g);
+        mouLis.setUi(this);
         this.addMouseListener(mouLis);
         this.addMouseMotionListener(mouLis);
     }

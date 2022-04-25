@@ -13,18 +13,18 @@ public class Ball{
         g.fillOval (x, y, size, size);
     }
 
-    //移动
+    /*移动功能修改
+    * 触界后修改速度为负值即可实现边界反弹
+    * 并不是用位置减去速度*/
     public void move() {
-        if (x>0&&x<1000){
-            x+=vx;
-        }else {
-            x-=vx;
+        if (x<0||x>1000) {
+            vx=-vx;
         }
-        if (y>100&&y<1000){
-            y+=vy;
-        }else {
-            y-=vy;
+        if (y<0||y>1000) {
+            vy=-vy;
         }
+        x+=vx;
+        y+=vy;
     }
 
     public Ball(int x, int y, int size, int vx, int vy, Color color) {
