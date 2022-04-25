@@ -19,8 +19,7 @@ public class MouLis implements MouseListener, MouseMotionListener {
     /*这样的话，每个线程得到的g均不是同一个对象
     private Ui ui;
     public void setUi(Ui ui) {this.ui = ui;}
-    g=ui.getGraphics(); //这个放在run（）中
-    */
+    g=ui.getGraphics(); //这个放在run（）中*/
 
     @Override
     public void mousePressed(MouseEvent e) {
