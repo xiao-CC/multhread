@@ -32,6 +32,7 @@ public class MouLis implements MouseListener, MouseMotionListener {
         balls.add(ball);
         g=ui.getGraphics();
         DrawThread drawThread=new DrawThread(g,balls);
+        System.out.println(drawThread.hashCode());
         MoveThread moveThread=new MoveThread(balls);
         new Thread(drawThread).start();
         new Thread(moveThread).start();

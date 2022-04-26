@@ -24,7 +24,6 @@ public class DrawThread extends Thread{
                 Ball ball = balls.get (i);
                 ball.drawBall(g);
             }
-            System.out.println(g.hashCode());
         }
     }
 }
