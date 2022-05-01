@@ -1,4 +1,4 @@
-package moveingball.v2;
+package moveingball.v3;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -21,7 +21,7 @@ public class MouLis implements MouseListener, MouseMotionListener {
     @Override
     public void mousePressed(MouseEvent e) {
 
-        int x=e.getX();
+        /*int x=e.getX();
         int y=e.getY();
         int size=ran.nextInt(50)+25;
         int vx=ran.nextInt(5)+1;
@@ -32,27 +32,21 @@ public class MouLis implements MouseListener, MouseMotionListener {
         balls.add(ball);
         g=ui.getGraphics();
         DrawThread drawThread=new DrawThread(g,balls);
-        System.out.println(drawThread.hashCode());
         MoveThread moveThread=new MoveThread(balls);
         new Thread(drawThread).start();
-        new Thread(moveThread).start();
+        new Thread(moveThread).start();*/
     }
     @Override
     public void mouseDragged(MouseEvent e) {
-        /*这个拖动，由于绘制的是list中的一堆小球，各个小球的color是new的时候随即出来的。
-        * 所以拖动时，轨迹的颜色不一样，后面根据需求，具体修改*/
+
         int x=e.getX();
         int y=e.getY();
-        int size=ran.nextInt(50)+25;
-        int vx=ran.nextInt(5)+1;
-        int vy=ran.nextInt(5)+1;
-        Color color=new Color(ran.nextInt(Integer.MAX_VALUE));
 
-        Ball ball=new Ball(x,y,size,vx,vy,color);
-        balls.add(ball);
+        MainBall mainBall=new MainBall(x,y);
         g=ui.getGraphics();
-        DrawThread drawThread=new DrawThread(g,balls);
-        new Thread(drawThread).start();
+
+        MainBallThread thread=new MainBallThread(mainBall,g);
+        new Thread(thread).start();
     }
 
     @Override

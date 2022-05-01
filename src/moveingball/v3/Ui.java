@@ -1,11 +1,10 @@
-package moveingball.v2;
+package moveingball.v3;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class Ui extends JFrame {
 
-    public Graphics g;
     MouLis mouLis=new MouLis();
 
     public Ui(){
@@ -15,7 +14,6 @@ public class Ui extends JFrame {
         this.setLayout(new FlowLayout());
         this.setVisible(true);
 
-        g=this.getGraphics();
         mouLis.setUi(this);
         this.addMouseListener(mouLis);
         this.addMouseMotionListener(mouLis);

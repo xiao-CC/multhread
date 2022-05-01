@@ -1,4 +1,4 @@
-package moveingball.v2;
+package moveingball.v3;
 
 import java.awt.*;
 
@@ -9,8 +9,9 @@ public class Ball{
 
     //画小球
     public void drawBall(Graphics g) {
-        g.setColor (color);
-        g.fillOval (x, y, size, size);
+        Graphics2D g2=(Graphics2D)g;
+        g2.setColor (color);
+        g2.fillOval (x, y, size, size);
     }
 
     /*移动功能修改
