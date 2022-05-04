@@ -1,9 +1,7 @@
-package ball3;
+package moveingball.v4;
 
 public class Start {
     public static void main(String[] args) {
-        Ui ui=new Ui();
-
-
+        UI ui=new UI();
     }
 }

@@ -1,4 +1,4 @@
-package test0421;
+package locktest;
 
 public class Main {
     public static void main(String[] args) {

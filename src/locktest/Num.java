@@ -1,4 +1,4 @@
-package test0421;
+package locktest;
 
 public class Num {
     private int num=0;

@@ -1,4 +1,4 @@
-package test0421;
+package locktest;
 
 public class Test implements Runnable {
     int a = 0;
