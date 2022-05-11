@@ -1,9 +1,9 @@
-package locktest;
+package locktest.v1;
 
 public class Main {
     public static void main(String[] args) {
         Object obj1=new Object ();
-        Num numobj = new Num ();
+        Num numobj = new Num();
 
         // 如果1 没有执行的时候 2 3 可以同时执行 没有锁
         ThreadSet threadSet=new ThreadSet(numobj,obj1);
@@ -25,6 +25,6 @@ public class Main {
         } catch (InterruptedException e) {
             e.printStackTrace ();
         }
-        System.out.println ("ThreadNum:"+ThreadGet.num);
+        System.out.println ("ThreadNum:"+ ThreadGet.num);
     }
 }

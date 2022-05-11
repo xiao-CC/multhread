@@ -1,4 +1,4 @@
-package locktest;
+package locktest.v1;
 
 public class ThreadSet implements Runnable{
     static int num;
