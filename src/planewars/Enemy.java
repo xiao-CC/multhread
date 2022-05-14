@@ -1,4 +1,4 @@
 package planewars;
 
-public class Enemy extends Flying{
-}
+/*public class Enemy extends Flying{
+}*/
