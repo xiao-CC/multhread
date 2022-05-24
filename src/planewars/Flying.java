@@ -3,8 +3,8 @@ package planewars;
 import java.awt.*;
 
 public class Flying {
-    private int x;
-    private int y;
+    private volatile int x;
+    private volatile int y;
     private int vx;
     private int vy;
     private int size;
@@ -19,8 +19,16 @@ public class Flying {
 
     public void move(){}
     public void draw(Graphics g){}
-    public boolean isCollide(){
-        return false;
+    public boolean isCollide(int x,int y,int size){
+        if (x>=this.x
+            &&x<=this.x+this.size
+            &&y>=this.y
+            &&y<=this.y+this.size){
+            return true;
+        }else {
+            return false;
+        }
+        //把return false放在else外面为什么不行？
     }
 
     public int getX() {
